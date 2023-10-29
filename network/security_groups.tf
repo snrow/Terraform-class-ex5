@@ -1,7 +1,7 @@
 resource "aws_security_group" "Infinity_Sg" {
   name        = "Infinity_Sg"
   description = "Infinity_Sg"
-  vpc_id      = "vpc-0ac9886d35dd60abf"
+  vpc_id      = var.target_vpc_id
 
   dynamic "ingress" {
     for_each = [
